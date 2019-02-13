@@ -165,7 +165,3 @@ $("body").on("change", "#new-note-form input[type=radio][name=bgColor]", functio
 
   $("#new-note").addClass(this.value);
 });
-
-$("body").on("click", ".note .kernel", function() {
-  $(this).parent(".note").addClass("popped");
-});

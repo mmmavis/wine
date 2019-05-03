@@ -15,104 +15,29 @@
     <meta property="og:image:type" content="image/png" />
     <link rel="apple-touch-icon" type="image/png" sizes="360x360" href="favicon.png">
     <link rel="icon" type="image/png" sizes="90x90" href="favicon.png">
-    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
-    <link rel="stylesheet/less" type="text/css" href="style.less" />
-    <script type="text/javascript" src="lib/less.min.js" ></script>
-    <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="lib/handlebars-v4.0.11.js"></script>
-    <script type="text/javascript" src="lib/moment.js"></script>
+    <style>
+      body {
+        background: url("archived.jpg") no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+      }
 
-    <script id="note-template" type="text/x-handlebars-template">
-      <div class="note {{bgColor}}{{#if imgSrc}} has-media{{/if}}" data-id="{{id}}" id="{{id}}">
-        <div class="glass" data-glass-type={{glassType}}>
-          <img src="{{glassImage}}" width="70">
-        </div>
-        <div class="content">
-          {{#if imgSrcIsVideo}}
-            <video src="{{imgSrc}}"controls preload="metadata">
-              Sorry, your browser doesn't support embedded videos.
-            </video>
-          {{else if imgSrcIsWebpage}}
-            <a href="{{imgSrc}}" target="_blank"">
-              (check this link out)
-            </a>
-          {{else if imgSrc}}
-            <div class="img-container">
-              <a href="{{imgSrc}}" target="_blank" title="click to see full size">
-                <img src="{{imgSrc}}">
-                <div class="overlay">click to see full size</div>
-              </a>
-            </div>
-          {{/if}}
-          <div>
-            <p class="message">{{{message}}}</p>
-            <div class="submitter">
-              <div>— {{submitter}}</div>
-              <div><small>({{localTime timestamp}})</small></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </script>
-
-    <script id="new-note-template" type="text/x-handlebars-template">
-      <div id="new-note" class="note">
-        <form id="new-note-form">
-          <div>
-            <textarea name="message" type="text" maxlength=300 placeholder="message (max. 300 characters)" required></textarea>
-          </div>
-          <div>
-            <input name="imgSrc" type="text" placeholder="(optional) image url (url should include file extension)" />
-          </div>
-          <div>
-            <input name="submitter" type="text" placeholder="your name" required />
-          </div>
-          <div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-1" name="glassType" value="1" checked="checked"><label for="glass-type-1"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-2" name="glassType" value="2"><label for="glass-type-2"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-3" name="glassType" value="3"><label for="glass-type-3"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-4" name="glassType" value="4"><label for="glass-type-4"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-5" name="glassType" value="5"><label for="glass-type-5"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-6" name="glassType" value="6"><label for="glass-type-6"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-7" name="glassType" value="7"><label for="glass-type-7"></label>
-            </div>
-            <div class="glass-option">
-              <input type="radio" id="glass-type-8" name="glassType" value="8"><label for="glass-type-8"></label>
-            </div>
-          </div>
-          <div>
-            <button type="submit">SEND</button>
-          </div>
-        </form>
-      </div>
-    </script>
-
+      h1 {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        color: white;
+        font-size: 4rem;
+        background: rgba(0, 0, 0, 0.5);
+        width: 90vw;
+        margin: 40vh auto;
+        text-align: center;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        letter-spacing: 5px;
+      }
+    </style>
   </head>
   <body>
-    <div id="outer-wrapper">
-      <div id="left">
-      </div>
-      <div id="right">
-        <h1>
-          <img src="assets/ms-bottle.svg" class="wine-bottle" />
-        </h1>
-        <div id="inner-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script src="script.js"></script>
+    <h1>ARCHIVED</h1>
   </body>
 </html>
